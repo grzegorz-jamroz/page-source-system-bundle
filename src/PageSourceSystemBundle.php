@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Ifrost\Bundle\PageSourceSystemBundle;
 
 use Ifrost\Bundle\PageSourceSystemBundle\Utilities\StorageInitiator;
+use Ifrost\PageSourceComponents\SettingCollection;
 use PageSourceSystem\Repository\SettingsRepository;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -15,8 +16,6 @@ class PageSourceSystemBundle extends Bundle
     {
         parent::build($container);
 
-        /** @var SettingsRepository $settingsRepository */
-        $settingsRepository = $container->get(SettingsRepository::class);
         $directory = $container->getParameter('app_data_dir');
 
         if (!is_string($directory)) {
@@ -25,7 +24,7 @@ class PageSourceSystemBundle extends Bundle
 
         (new StorageInitiator(
             $directory,
-            $settingsRepository,
+            new SettingsRepository($directory, new SettingCollection()),
         ))->init();
     }
 

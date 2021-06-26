@@ -5,7 +5,6 @@ parameters:
 
 services:
     PageSourceSystem\Repository\SettingsRepository:
-        public: true
         arguments:
             $directory: '%app_data_dir%'
 
