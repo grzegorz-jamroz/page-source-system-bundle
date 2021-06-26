@@ -16,16 +16,16 @@ class PageSourceSystemBundle extends Bundle
     {
         parent::build($container);
 
-//        $directory = $container->getParameter('page_source_system.app_data_dir');
-//
-//        if (!is_string($directory)) {
-//            throw new \Exception('Parameter page_source_system.app_data_dir is not set as string.');
-//        }
-//
-//        (new StorageInitiator(
-//            $directory,
-//            new SettingsRepository($directory, new SettingCollection()),
-//        ))->init();
+        $directory = $this->container->getParameter('page_source_system.app_data_dir');
+
+        if (!is_string($directory)) {
+            throw new \Exception('Parameter page_source_system.app_data_dir is not set as string.');
+        }
+
+        (new StorageInitiator(
+            $directory,
+            new SettingsRepository($directory, new SettingCollection()),
+        ))->init();
     }
 
     public function getPath(): string
