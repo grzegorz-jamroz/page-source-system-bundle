@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Ifrost\Bundle\PageSourceSystemBundle;
 
-//use PageSourceSystem\Domain\Seo;
-//use PageSourceSystem\Setting\AbstractGeneral;
-//use PageSourceSystem\Setting\AbstractLanguages;
-//use Ramsey\Uuid\Uuid;
 use Ifrost\Bundle\PageSourceSystemBundle\Utilities\StorageInitiator;
 use PageSourceSystem\Repository\SettingsRepository;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
