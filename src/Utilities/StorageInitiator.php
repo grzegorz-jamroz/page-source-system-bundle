@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ifrost\Bundle\PageSourceSystemBundle\Utilities;
 
-use PageSourceSystem\Domain\Seo;
+use PageSourceSystem\Component\BaseSeo;
 use PageSourceSystem\Repository\SettingsRepository;
 use PageSourceSystem\Setting\AbstractGeneral;
 use PageSourceSystem\Setting\AbstractLanguages;
@@ -67,9 +67,10 @@ class StorageInitiator
         foreach ($this->settingsRepository->getSupportedLanguages() as $language) {
             $uuid = (string) Uuid::uuid4();
             $primarySeo[$language] = $uuid;
-            $seo = Seo::createFromArray([
+            $seo = BaseSeo::createFromArray([
                 'uuid' => $uuid,
                 'language' => $language,
+                'internalTitle' => 'Seo',
             ]);
             $componentStorage = new ComponentStorage(
                 $this->directory,
