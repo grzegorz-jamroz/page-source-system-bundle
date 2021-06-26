@@ -16,6 +16,7 @@ class PageSourceSystemBundle extends Bundle
     {
         parent::build($container);
 
+        dump($this->extension->getConfiguration());
         $directory = $this->container->getParameter('page_source_system.app_data_dir');
 
         if (!is_string($directory)) {
