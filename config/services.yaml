@@ -1,22 +1,4 @@
 parameters:
-    project_dir: '%kernel.project_dir%'
-    app_data_dir: '%project_dir%/data'
-    app_render_dir: '%project_dir%/render'
-
-services:
-    PageSourceSystem\Repository\SettingsRepository:
-        arguments:
-            $directory: '%app_data_dir%'
-
-    settings_repository.render:
-        class: PageSourceSystem\Repository\SettingsRepository
-        arguments:
-            $directory: '%app_render_dir%'
-
-    PageSourceSystem\Repository\PageRepository:
-    PageSourceSystem\Repository\ComponentRepository:
-    PageSourceSystem\Utility\PageSeoDataTransformer:
-
-    PageSourceSystem\Repository\RenderedPageRepository:
-        arguments:
-            $settingsRepository: '@settings_repository.render'
+    page_source_system.project_dir: '%kernel.project_dir%'
+    page_source_system.app_data_dir: '%page_source_system.project_dir%/data'
+    page_source_system.app_render_dir: '%page_source_system.project_dir%/render'
