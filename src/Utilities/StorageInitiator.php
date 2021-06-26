@@ -40,7 +40,23 @@ class StorageInitiator
     protected function generateDefaultLanguages(): void
     {
         $this->settingsRepository->getSettingStorage(AbstractLanguages::getTypename())->overwrite(
-            (new BaseLanguages('en', ['en']))->jsonSerialize()
+            (new BaseLanguages(
+                'pl',
+                [
+                    'pl',
+                    'en',
+                ],
+                [
+                    [
+                        'label' => 'Polski',
+                        'value' => 'pl',
+                    ],
+                    [
+                        'label' => 'English',
+                        'value' => 'en',
+                    ]
+                ]
+            ))->jsonSerialize()
         );
     }
 

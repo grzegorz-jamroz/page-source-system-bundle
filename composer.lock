@@ -216,12 +216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/grzegorz-jamroz/page-source-system.git",
-                "reference": "5ccac53b7564b96a9ca820d0202952f2eddf2955"
+                "reference": "4a74a14b69fe224da1f96a1f329dc0feba0590ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/grzegorz-jamroz/page-source-system/zipball/5ccac53b7564b96a9ca820d0202952f2eddf2955",
-                "reference": "5ccac53b7564b96a9ca820d0202952f2eddf2955",
+                "url": "https://api.github.com/repos/grzegorz-jamroz/page-source-system/zipball/4a74a14b69fe224da1f96a1f329dc0feba0590ba",
+                "reference": "4a74a14b69fe224da1f96a1f329dc0feba0590ba",
                 "shasum": ""
             },
             "require": {
@@ -250,7 +250,7 @@
                 "issues": "https://github.com/grzegorz-jamroz/page-source-system/issues",
                 "source": "https://github.com/grzegorz-jamroz/page-source-system/tree/master"
             },
-            "time": "2021-06-26T06:06:04+00:00"
+            "time": "2021-06-26T07:57:29+00:00"
         },
         {
             "name": "grzegorz-jamroz/php-common",
