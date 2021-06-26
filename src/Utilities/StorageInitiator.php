@@ -54,7 +54,7 @@ class StorageInitiator
                     [
                         'label' => 'English',
                         'value' => 'en',
-                    ]
+                    ],
                 ]
             ))->jsonSerialize()
         );
