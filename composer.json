@@ -11,9 +11,9 @@
   },
   "require": {
     "doctrine/collections": "^1.6",
-    "symfony/dependency-injection": "^5.2",
-    "symfony/config": "^5.2",
-    "symfony/http-kernel": "^5.2",
+    "symfony/dependency-injection": ">=5.2",
+    "symfony/config": ">=5.2",
+    "symfony/http-kernel": ">=5.2",
     "grzegorz-jamroz/php-common": "dev-master",
     "grzegorz-jamroz/page-source-system": "dev-master",
     "grzegorz-jamroz/simple-storage-system": "dev-master",
